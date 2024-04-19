@@ -1,0 +1,62 @@
+h3 {
+  margin: 0 !important;
+  margin-bottom: 16px;
+}
+.hostDiv {
+  position: relative;
+  width: 150px;
+  margin: 24px auto;
+  margin-bottom: 48px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-tooltip {
+  position: absolute;
+  z-index: 9;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+label {
+  margin-right: 10px;
+}
+select,
+input[type="color"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+input[type="color"] {
+  width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .controller {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  h3 {
+    font-size: 16px;
+  }
+}
