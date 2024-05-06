@@ -41,7 +41,6 @@ export class CustomTooltipDirective {
       this.tooltipElement.style.fontSize = this.fontSize;
       const hostRect = this.elementRef.nativeElement.getBoundingClientRect();
       const tooltipRect = this.tooltipElement.getBoundingClientRect();
-      console.log(hostRect, tooltipRect);
 
       let top, left;
 
@@ -63,7 +62,6 @@ export class CustomTooltipDirective {
           left = hostRect.left - 2 + (hostRect.width - tooltipRect.width) / 2;
           break;
       }
-      console.log(top, left);
 
       this.renderer.setStyle(this.tooltipElement, 'position', 'absolute');
       this.renderer.setStyle(

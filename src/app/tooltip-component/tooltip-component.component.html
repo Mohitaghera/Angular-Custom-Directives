@@ -12,12 +12,10 @@
 </div>
 <div class="controller">
   <div>
+    
     <label for="position">Position:</label>
     <select id="position" [(ngModel)]="position">
-      <option value="left">Left</option>
-      <option value="right">Right</option>
-      <option value="top">Top</option>
-      <option value="bottom">Bottom</option>
+      <option *ngFor="let pos of positions" [value]="pos.value">{{ pos.label }}</option>
     </select>
   </div>
   <div>
@@ -27,13 +25,7 @@
   <div>
     <label for="fontSize">Font Size:</label>
     <select id="fontSize" [(ngModel)]="fontSize">
-      <option value="12px">12</option>
-      <option value="14px">14</option>
-      <option value="16px">16</option>
-      <option value="20px">20</option>
-      <option value="24px">24</option>
-      <option value="28px">28</option>
-      <option value="36px">36</option>
+      <option *ngFor="let size of fontSizes" [value]="size.value">{{ size.label }}</option>
     </select>
   </div>
 </div>
